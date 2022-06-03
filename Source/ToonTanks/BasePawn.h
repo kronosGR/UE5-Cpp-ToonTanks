@@ -36,7 +36,5 @@ private:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float Speed = 400.f;
+	
 };
