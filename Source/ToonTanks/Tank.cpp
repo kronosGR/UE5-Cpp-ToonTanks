@@ -14,6 +14,14 @@ ATank::ATank()
 	Camera->SetupAttachment(SpringArm);
 }
 
+void ATank::BeginPlay()
+{
+	Super::BeginPlay();
+
+	PlayerControllerRef = Cast<APlayerController>(GetController());
+}
+
+
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -34,5 +42,5 @@ void ATank::Turn(float Value)
 {
 	FRotator DeltaRotation = FRotator::ZeroRotator;
 	DeltaRotation.Yaw = Value * TurnRate * UGameplayStatics::GetWorldDeltaSeconds(this);
-	AddActorLocalRotation(DeltaRotation,true);
+	AddActorLocalRotation(DeltaRotation, true);
 }
