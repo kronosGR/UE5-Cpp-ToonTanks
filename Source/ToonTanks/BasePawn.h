@@ -18,19 +18,14 @@ public:
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	class UCapsuleComponent *CapsuleComp;
+	class UCapsuleComponent* CapsuleComp;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent *BaseMesh;
+	UStaticMeshComponent* BaseMesh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent *TurretMesh;
+	UStaticMeshComponent* TurretMesh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	USceneComponent *ProjectileSpawnPoint;
-
-public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-	
+	USceneComponent* ProjectileSpawnPoint;
 };
