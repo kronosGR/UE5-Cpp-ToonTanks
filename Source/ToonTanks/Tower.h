@@ -25,4 +25,10 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category="Compat")
 	float FireRange = 300.f;
+
+	FTimerHandle FireRateTimerHandle;
+	float FireRate = 2.f;
+	void CheckFireCondition();
+
+	bool InFireRange();
 };
