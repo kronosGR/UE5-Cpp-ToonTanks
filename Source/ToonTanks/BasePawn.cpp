@@ -2,7 +2,6 @@
 
 #include "BasePawn.h"
 #include "Components/CapsuleComponent.h"
-#include "DrawDebugHelpers.h"
 #include "Projectile.h"
 
 // Sets default values
