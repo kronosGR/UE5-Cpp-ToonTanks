@@ -11,7 +11,7 @@ void ATower::Tick(float DeltaTime)
 
 	if (InFireRange())
 	{
-		RotateTurret(Tank->GetActorLocation());		
+		RotateTurret(Tank->GetActorLocation());
 	}
 }
 
@@ -44,4 +44,11 @@ bool ATower::InFireRange()
 		}
 	}
 	return false;
+}
+
+void ATower::HandleDestruction()
+{
+	Super::HandleDestruction();
+
+	Destroy();
 }
